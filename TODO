@@ -1,0 +1,41 @@
+[] How are you feeling today?
+    [] Feeling input must be required
+
+[] How well are you understanding the content?
+    [] Allow selection of 1-6
+    [] The score must be required 
+
+
+[] How well are you being supported?
+    [] Allow selection of 1-6
+    [] The score must be required 
+
+
+[] Any comments you want to leave?
+
+
+[] Submit Button
+    [] Send data to DB
+
+
+[] Allow user to view previous comments
+    [] GET route
+    [] Display on DOM
+
+---STRETCH---
+
+[] Allow user to update scores
+    [] Disallow empty values
+
+[] Style with Material-UI
+
+[] Admin selection
+    [] Display all previous feedback forms
+        [] Display the most recent form at the top
+    [] Allow user to delete
+        [] Delete route
+        [] Delete Button
+        [] Update DOM
+        [] Prompt user to confirm prior to delete from DB
+
+[] DEPLOY TO HEROKU
