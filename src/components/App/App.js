@@ -13,7 +13,22 @@ import SubmitForm from "../SubmitForm/SubmitForm"
 
 
 class App extends Component {
+
+  //POST to DB
+  sendFeedback = () => {
+    axios({
+      method: 'POST',
+      url: '/submit',
+      data: this.props.completedFeedback
+    }).then(response => {
+      console.log('Back from POST, response:', response);
+    }).catch(err => {
+      console.error('Error in POST', err);
+    })
+  }
+
   render() {
+
     return (
       <Router>
       <div className="App">
@@ -49,4 +64,8 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = (reduxState) => ({
+  feedbackForm: reduxState.feedbackUpdate
+})
+
+export default connect(mapStateToProps)(App);
