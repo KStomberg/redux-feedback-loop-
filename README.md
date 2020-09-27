@@ -1,9 +1,8 @@
-# Project Name
+# Feedback Form
 
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
 
 ## Description
 
-Your project description goes here. What problem did you solve? How did you solve it?
+Developed a simple Review form based of of the Prime Acedemy daily review system, developed with React/Redux and Postgresql
 
 Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
