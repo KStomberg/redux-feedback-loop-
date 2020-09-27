@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('build'));
 
 /** ---------- EXPRESS ROUTES ---------- **/
-app.use('/form', formRouter);
+app.use('/feedback', formRouter);
 
 /** ---------- START SERVER ---------- **/
 app.listen(PORT, () => {

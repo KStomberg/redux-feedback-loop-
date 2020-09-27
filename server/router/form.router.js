@@ -6,15 +6,15 @@ const pool = require('../modules/pool');
 // POST route
 router.post('/', (req, res) => {
   console.log('In server POST');
-  let newFeedback = req.body;
+  let newForm = req.body;
   let queryString = `INSERT INTO "feedback" ("feeling", "understanding", "support", "comments")
                        VALUES ($1, $2, $3, $4);`;
   pool
     .query(queryString, [
-      newFeedback.feeling,
-      newFeedback.understanding,
-      newFeedback.support,
-      newFeedback.comments,
+        newForm.feeling,
+        newForm.understanding,
+        newForm.support,
+        newForm.comments,
     ])
     .then((result) => {
       res.sendStatus(201);

@@ -18,8 +18,8 @@ class App extends Component {
   sendFeedback = () => {
     axios({
       method: 'POST',
-      url: '/form',
-      data: this.props.completedFeedback
+      url: '/feedback',
+      data: this.props.feedbackForm
     }).then(response => {
       console.log('Back from POST, response:', response);
     }).catch(err => {
