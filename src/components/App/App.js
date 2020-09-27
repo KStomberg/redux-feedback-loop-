@@ -9,6 +9,7 @@ import Understanding from "../Understanding/Understanding";
 import Supported from "../Supported/Supported";
 import LeaveComments from "../LeaveComments/LeaveComments";
 import SubmitForm from "../SubmitForm/SubmitForm"
+import ReviewPrevious from "../ReviewPrevious/ReviewPrevious"
 
 
 
@@ -24,6 +25,17 @@ class App extends Component {
       console.log('Back from POST, response:', response);
     }).catch(err => {
       console.error('Error in POST', err);
+    })
+  }
+
+  getFeedback = () => {
+    axios({
+      method: 'GET',
+      url: '/feedback'
+    }).then(response => {
+      console.log('Back from GET, response:', response);
+    }).catch(err => {
+      console.error('Error in GET', err);
     })
   }
 
@@ -58,6 +70,10 @@ class App extends Component {
             <SubmitForm 
               sendFeedback={this.sendFeedback}
             />
+          </Route>
+
+          <Route path='/review' exact>
+             <ReviewPrevious />
           </Route>
         
       </div>

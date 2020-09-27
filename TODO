@@ -1,21 +1,21 @@
-[] How are you feeling today?
-    [] Feeling input must be required
+[X] How are you feeling today?
+    [X] Feeling input must be required
 
-[] How well are you understanding the content?
-    [] Allow selection of 1-6
-    [] The score must be required 
-
-
-[] How well are you being supported?
-    [] Allow selection of 1-6
-    [] The score must be required 
+[X] How well are you understanding the content?
+    [X] Allow selection of 1-6
+    [X] The score must be required 
 
 
-[] Any comments you want to leave?
+[X] How well are you being supported?
+    [X] Allow selection of 1-6
+    [X] The score must be required 
 
 
-[] Submit Button
-    [] Send data to DB
+[X] Any comments you want to leave?
+
+
+[X] Submit Button
+    [X] Send data to DB
 
 
 [] Allow user to view previous comments
