@@ -4,12 +4,11 @@ import {connect} from 'react-redux';
 import axios from 'axios';
 import './App.css';
 
-// import { FeelingToday } from "../FeelingToday/FeelingToday";
 import FeelingToday from "../FeelingToday/FeelingToday"
 import Understanding from "../Understanding/Understanding";
 import Supported from "../Supported/Supported";
 import LeaveComments from "../LeaveComments/LeaveComments";
-
+import SubmitForm from "../SubmitForm/SubmitForm"
 
 
 
@@ -38,6 +37,10 @@ class App extends Component {
 
           <Route path='/comments' exact>
             <LeaveComments />
+          </Route>
+
+          <Route path='/submit' exact>
+            <SubmitForm />
           </Route>
         
       </div>

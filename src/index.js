@@ -10,6 +10,7 @@ import understandingReducer from './components/Understanding/understandingReduce
 import supportedReducer from "./components/Supported/supportedReducer";
 import leaveCommentsReducer from "./components/LeaveComments/leaveCommentsReducer";
 import feelingTodayReducer from "./components/FeelingToday/feelingTodayReducer";
+import submitFormReducer from './components/SubmitForm/submitFormReducer'
 
 
 //initial state
@@ -41,9 +42,18 @@ const feedbackUpdate = (state = initialFeedbackForm, action) => {
         }
     }
 
+    if (action.type === 'SET_SUPPORTED') {
+        console.log('SET_SUPPORTED action.payload:', action.payload);
+        //Updating response for support
+        return {
+            ...state,
+            support: action.payload
+        }
+    }
+
     if (action.type === 'SET_COMMENTS') {
         console.log('SET_COMMENTS action.payload:', action.payload);
-        //Updating response for feeling
+        //Updating response for comments
         return {
             ...state,
             comments: action.payload
