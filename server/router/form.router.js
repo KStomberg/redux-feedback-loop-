@@ -11,10 +11,10 @@ router.post('/', (req, res) => {
                        VALUES ($1, $2, $3, $4);`;
   pool
     .query(queryString, [
-        newForm.feeling,
-        newForm.understanding,
-        newForm.support,
-        newForm.comments,
+      newForm.feeling,
+      newForm.understanding,
+      newForm.support,
+      newForm.comments,
     ])
     .then((result) => {
       res.sendStatus(201);
@@ -27,7 +27,7 @@ router.post('/', (req, res) => {
 
 router.get('/', (req, res) => {
   console.log('Getting previous forms');
-  res.send(formHistory)
-})
+  res.send(formHistory);
+});
 
 module.exports = router;

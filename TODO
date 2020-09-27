@@ -18,9 +18,9 @@
     [X] Send data to DB
 
 
-[] Allow user to view previous comments
-    [] GET route
-    [] Display on DOM
+[X] Allow user to view previous comments
+    [X] GET route
+    [X] Display on DOM
 
 ---STRETCH---
 
