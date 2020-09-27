@@ -13,8 +13,8 @@ class LeaveComments extends Component {
     }
 
     onNext = () => {
-        console.log('Moving to next page => SubmitForm');
-        this.props.history.push('/submit')
+        console.log('Moving to next page => review');
+        this.props.history.push('/review')
     }
 
     render() {

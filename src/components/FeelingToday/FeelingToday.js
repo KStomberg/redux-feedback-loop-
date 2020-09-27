@@ -17,11 +17,6 @@ class FeelingToday extends Component {
         this.props.history.push('/understanding')
     }
 
-    review = () => {
-        console.log('Moving to review page => /review');
-        this.props.history.push('/review')
-    }
-
     render() {
         return(
             <div>
@@ -34,8 +29,6 @@ class FeelingToday extends Component {
                     onChange={this.updateFeeling}
                 />
                 <button onClick={this.onNext} > Next </button>
-
-                <button onClick={this.review} > Review Previous Forms </button>
             </div>
         )
     }

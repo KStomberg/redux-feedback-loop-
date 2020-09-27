@@ -15,6 +15,7 @@ import ReviewPrevious from "../ReviewPrevious/ReviewPrevious"
 
 class App extends Component {
 
+
   //POST to DB
   sendFeedback = () => {
     axios({
@@ -25,17 +26,6 @@ class App extends Component {
       console.log('Back from POST, response:', response);
     }).catch(err => {
       console.error('Error in POST', err);
-    })
-  }
-
-  getFeedback = () => {
-    axios({
-      method: 'GET',
-      url: '/feedback'
-    }).then(response => {
-      console.log('Back from GET, response:', response);
-    }).catch(err => {
-      console.error('Error in GET', err);
     })
   }
 
@@ -73,7 +63,7 @@ class App extends Component {
           </Route>
 
           <Route path='/review' exact>
-             <ReviewPrevious />
+             <ReviewPrevious reviewFeedback={this.getFeedback}/>
           </Route>
         
       </div>

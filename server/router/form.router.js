@@ -25,4 +25,9 @@ router.post('/', (req, res) => {
     });
 });
 
+router.get('/', (req, res) => {
+  console.log('Getting previous forms');
+  res.send(formHistory)
+})
+
 module.exports = router;
