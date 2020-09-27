@@ -31,9 +31,16 @@ const feedbackUpdate = (state = initialFeedbackForm, action) => {
         }
     } 
 
+    if (action.type === 'SET_UNDERSTANDING') {
+        //Updating response for feeling
+        return {
+            ...state,
+            understanding: action.payload
+        }
+    }
 
     return state;
-    
+
 }
 
 const reduxStore = createStore(

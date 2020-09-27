@@ -6,9 +6,11 @@ import './App.css';
 
 // import { FeelingToday } from "../FeelingToday/FeelingToday";
 import FeelingToday from "../FeelingToday/FeelingToday"
-import LeaveComments from "../LeaveComments/LeaveComments";
-import Supported from "../Supported/Supported";
 import Understanding from "../Understanding/Understanding";
+import Supported from "../Supported/Supported";
+import LeaveComments from "../LeaveComments/LeaveComments";
+
+
 
 
 class App extends Component {
@@ -21,9 +23,23 @@ class App extends Component {
           <h4><i>Don't forget it!</i></h4>
         </header>
         <br/>
+
         <Route path='/' exact>
           <FeelingToday />
         </Route>
+
+        <Route path='/understanding' exact>
+            <Understanding />
+          </Route>
+
+          <Route path='/supported' exact>
+            <Supported />
+          </Route>
+
+          <Route path='/leaveComments' exact>
+            <LeaveComments />
+          </Route>
+        
       </div>
       </Router>
     );

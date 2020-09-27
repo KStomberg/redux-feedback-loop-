@@ -9,6 +9,12 @@ class FeelingToday extends Component {
             type: 'SET_FEELING',
             payload: event.target.value
         });
+        console.log('event.target.value', event.target.value);
+    }
+
+    onNext = () => {
+        console.log('Moving to next page => Understanding');
+        this.props.history.push('/understanding')
     }
 
     render() {
@@ -20,6 +26,7 @@ class FeelingToday extends Component {
                     className="input"
                     onChange={this.updateFeeling}
                 />
+                <button onClick={this.onNext} > Next </button>
             </div>
         )
     }
