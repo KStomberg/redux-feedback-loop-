@@ -13,7 +13,10 @@ class SubmitForm extends Component {
 
     render() {
         return(
-            <h1>TEST</h1>
+            <div>
+                <h1>Your done! Hit the submit button to send your form!</h1>
+                <button onClick={this.onCompletion} > Submit </button>
+            </div>
         )
     }
 }
