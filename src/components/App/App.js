@@ -55,7 +55,9 @@ class App extends Component {
           </Route>
 
           <Route path='/submit' exact>
-            <SubmitForm />
+            <SubmitForm 
+              sendFeedback={this.sendFeedback}
+            />
           </Route>
         
       </div>
