@@ -22,6 +22,8 @@ class Supported extends Component {
             <div>
                 <h1>On a scale of 1 to 6, how well do have you felt supported today?</h1>
                 <input required
+                    min="1"
+                    max="6"
                     type="number"
                     className="input"
                     onChange={this.updateSupported}

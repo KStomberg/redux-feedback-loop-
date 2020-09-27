@@ -22,6 +22,8 @@ class FeelingToday extends Component {
             <div>
                 <h1>On a scale of 1 to 6, how are you feeling today?</h1>
                 <input required
+                    min="1"
+                    max="6"
                     type="number"
                     className="input"
                     onChange={this.updateFeeling}
