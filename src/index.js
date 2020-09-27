@@ -3,14 +3,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/App/App';
 import registerServiceWorker from './registerServiceWorker';
-// import {Provider} from 'react-redux';
+import {Provider} from 'react-redux';
 
-import {createStore, combineReducers} from 'redux';
+import {createStore, combineReducers, applyMiddleware} from 'redux';
 import understandingReducer from './components/Understanding/understandingReducer';
 import supportedReducer from "./components/Supported/supportedReducer";
 import leaveCommentsReducer from "./components/LeaveComments/leaveCommentsReducer";
 import feelingTodayReducer from "./components/FeelingToday/feelingTodayReducer";
 
+
+//initial state
 const initialFeedbackForm = {
     feeling: '',
     understanding: '',
@@ -27,21 +29,19 @@ const feedbackUpdate = (state = initialFeedbackForm, action) => {
             ...state,
             feeling: action.payload
         }
-    }
+    } 
+
+
+    return state;
+    
 }
 
-// combineReducers({
-//     understanding: understandingReducer,
-//     supported: supportedReducer,
-//     leaveComments: leaveCommentsReducer,
-//     feelingToday: feelingTodayReducer,
-// })
+const reduxStore = createStore(
+    combineReducers({
+        feedbackUpdate
+    })
+)
 
-// const store = createStore(
-
-// ) 
-// <Provider store={store} >
-
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<Provider store={reduxStore} ><App /> </Provider>, document.getElementById('root') );
 
 registerServiceWorker();
