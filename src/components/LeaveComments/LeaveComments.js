@@ -12,10 +12,10 @@ class LeaveComments extends Component {
         console.log('event.target.value', event.target.value);
     }
 
-    // onNext = () => {
-    //     console.log('Moving to next page => LeaveComments');
-    //     this.props.history.push('/LeaveComments')
-    // }
+    onNext = () => {
+        console.log('Moving to next page => SubmitForm');
+        this.props.history.push('/submit')
+    }
 
     render() {
         return(
@@ -26,7 +26,7 @@ class LeaveComments extends Component {
                     className="input"
                     onChange={this.updateLeaveComments}
                 />
-                {/* <button onClick={this.onNext} > Next </button> */}
+                <button onClick={this.onNext} > Next </button>
             </div>
         )
     }
