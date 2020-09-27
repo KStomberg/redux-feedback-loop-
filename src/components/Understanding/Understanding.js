@@ -6,7 +6,7 @@ class Understanding extends Component {
 
     updateUnderstanding = (event) => {
         this.props.dispatch({
-            type: 'SET_Understanding',
+            type: 'SET_UNDERSTANDING',
             payload: event.target.value
         });
         console.log('event.target.value', event.target.value);

@@ -36,7 +36,7 @@ class App extends Component {
             <Supported />
           </Route>
 
-          <Route path='/leaveComments' exact>
+          <Route path='/comments' exact>
             <LeaveComments />
           </Route>
         

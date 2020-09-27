@@ -25,6 +25,7 @@ const feedbackUpdate = (state = initialFeedbackForm, action) => {
 
     if (action.type === 'SET_FEELING') {
         //Updating response for feeling
+        console.log('SET_FEELINGS action.payload:', action.payload);
         return {
             ...state,
             feeling: action.payload
@@ -33,9 +34,19 @@ const feedbackUpdate = (state = initialFeedbackForm, action) => {
 
     if (action.type === 'SET_UNDERSTANDING') {
         //Updating response for feeling
+        console.log('SET_UNDERSTANDING action.payload:', action.payload);
         return {
             ...state,
             understanding: action.payload
+        }
+    }
+
+    if (action.type === 'SET_COMMENTS') {
+        console.log('SET_COMMENTS action.payload:', action.payload);
+        //Updating response for feeling
+        return {
+            ...state,
+            comments: action.payload
         }
     }
 
